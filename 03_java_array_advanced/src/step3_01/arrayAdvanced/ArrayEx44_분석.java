@@ -85,7 +85,7 @@ public class ArrayEx44_분석 {
 					if (mono[i][j] == 1 && mono[i][j+1]==1 && mono[i][j+2]==1 &&mono[i][j+3]==1 && mono[i][j+4]==1 ) win = 1;
 					if (mono[i][j] == 2 && mono[i][j+1]==2 && mono[i][j+2]==2 &&mono[i][j+3]==2 && mono[i][j+4]==2 ) win = 2;
 				}		
-			} //세로검
+			} //세로검사
 			for (int i = 0; i < size -4; i++) {
 				for (int j = 0; j < size; j++) {
 					if (mono[i][j] == 1 && mono[i+1][j]==1 && mono[i+2][j]==1 &&mono[i+3][j]==1 && mono[i+4][j]==1 ) win = 1;

@@ -102,15 +102,15 @@ public class ArrayEx44_문제 {
 			}
 
 			// 대각선 검사
-			for (int i = 0; i < size - 4; i++) {
-				for (int j = 0; j < size - 4; j++) {
+			for (int i = 0; i < size - 4; i++) { // 0 1 2 3 4 5  6에서는 대각선으로 4개까지 가능으로 6은못한다
+				for (int j = 0; j < size - 4; j++) {// 0 1 2 3 4 5 
 					if (omok[i][j] == 1 && omok[i + 1][j + 1] == 1 && omok[i + 2][j + 2] == 1 && omok[i + 3][j + 3] == 1 && omok[i + 4][j + 4] == 1)  win = 1;					
 					if (omok[i][j] == 2 && omok[i + 1][j + 1] == 2 && omok[i + 2][j + 2] == 2 && omok[i + 3][j + 3] == 2  && omok[i + 4][j + 4] == 2) win = 2;				
 				}
 			}
 			
-			for (int i = 9; i > size - 7; i--) {
-				for (int j = 0; j < size - 4; j++) {
+			for (int i = 9; i > size - 7; i--) { //9 8 7 6 5 4
+				for (int j = 0; j < size - 4; j++) { // 0 1 2 3 4 5
 					if (omok[i][j] == 1 && omok[i - 1][j + 1] == 1 && omok[i - 2][j + 2] == 1 && omok[i - 3][j + 3] == 1 && omok[i - 4][j + 4] == 1) win = 1;
 					if (omok[i][j] == 2 && omok[i - 1][j + 1] == 2 && omok[i - 2][j + 2] == 2 && omok[i - 3][j + 3] == 2 && omok[i - 4][j + 4] == 2) win = 2;
 				}

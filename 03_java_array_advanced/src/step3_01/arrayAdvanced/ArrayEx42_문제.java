@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * # 나만의 마블
  * 
- * 옷 □ □ □ □ 
+ * 옷 □ □ □ □     // 0 = 옷 , □ = 1 ,■ = 20
  * □ ■ ■ ■ □ 
  * □ ■ ■ ■ □ 
  * □ ■ ■ ■ □ 
@@ -39,9 +39,9 @@ public class ArrayEx42_문제 {
 			
 			for (int i = 0; i < map.length; i++) {
 				for (int j = 0; j < map[i].length; j++) {
-					if (map[i][j] == ROAD) 		  	System.out.print("■ ");
-					else if (map[i][j] == player) 	System.out.print("P ");
-					else 							System.out.print("□ ");
+					if (map[i][j] == ROAD) 		  	System.out.print("■ "); // 막다른길 표시
+					else if (map[i][j] == player) 	System.out.print("P "); // 내플레이어 표시
+					else 							System.out.print("□ "); // 그냥길?
 				}
 				System.out.println();
 			}

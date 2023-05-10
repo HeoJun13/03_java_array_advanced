@@ -36,12 +36,12 @@ public class ArrayEx41_문제 {
 		int y = 0;
 		
 		for (int i = 0; i < ladder.length; i++) {
-			for (int j = 0; j < ladder[i].length; j++) {		// 특수문자 : ㅂ + 한자
-				if (ladder[i][j] == 0) {
+			for (int j = 0; j < ladder[i].length; j++) {		// 특수문자 : ㅂ + 한자 
+				if (ladder[i][j] == 0) { // 0 일때
 					System.out.print(" │ ");
 				}
 				else if (ladder[i][j] == 1) {
-					if (j != 0 && ladder[i][j-1] == 1) { 
+					if (j != 0 && ladder[i][j-1] == 1) { // 1 일때
 						System.out.print("─┤ ");
 					}
 					else if (j != ladder[i].length - 1 && ladder[i][j+1] == 1){
