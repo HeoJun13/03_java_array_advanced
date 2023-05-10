@@ -47,9 +47,10 @@ public class ArrayEx42_모방 {
 					else {
 						System.out.print(" □ ");
 					}
+					System.out.println();
 					}
+				System.out.println();
 				}
-			System.out.println();
 			}
 		}
 	}
