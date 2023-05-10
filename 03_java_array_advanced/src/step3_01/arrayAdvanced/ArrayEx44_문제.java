@@ -87,7 +87,7 @@ public class ArrayEx44_문제 {
 
 			// 가로검사
 			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size - 4; j++) {
+				for (int j = 0; j < size - 4; j++) { // -4인 인 이유. 0부터 5까지 반복.
 					if (omok[i][j] == 1 && omok[i][j + 1] == 1 && omok[i][j + 2] == 1 && omok[i][j + 3] == 1 && omok[i][j + 4] == 1) win = 1;				
 					if (omok[i][j] == 2 && omok[i][j + 1] == 2 && omok[i][j + 2] == 2 && omok[i][j + 3] == 2 && omok[i][j + 4] == 2) win = 2;					
 				}

@@ -1,8 +1,9 @@
 package step3_01.arrayAdvanced;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class ArraryEx44_분석 {
+public class ArrayEx44_분석 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -34,7 +35,7 @@ public class ArraryEx44_분석 {
 		while (true) {
 			
 			System.out.println("===== 오목게임 =====");
-			System.out.print(" ");
+			System.out.print("  ");
 			for (int i = 0; i < size; i++) {
 				System.out.print(i + " ");
 			}
@@ -81,10 +82,29 @@ public class ArraryEx44_분석 {
 			// 가로검사
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < size - 4; j++) {
-					
+					if (mono[i][j] == 1 && mono[i][j+1]==1 && mono[i][j+2]==1 &&mono[i][j+3]==1 && mono[i][j+4]==1 ) win = 1;
+					if (mono[i][j] == 2 && mono[i][j+1]==2 && mono[i][j+2]==2 &&mono[i][j+3]==2 && mono[i][j+4]==2 ) win = 2;
+				}		
+			} //세로검
+			for (int i = 0; i < size -4; i++) {
+				for (int j = 0; j < size; j++) {
+					if (mono[i][j] == 1 && mono[i+1][j]==1 && mono[i+2][j]==1 &&mono[i+3][j]==1 && mono[i+4][j]==1 ) win = 1;
+					if (mono[i][j] == 2 && mono[i+1][j]==2 && mono[i+2][j]==2 &&mono[i+3][j]==2 && mono[i+4][j]==2 ) win = 2;	
 				}
-				
+			} // 대각선.
+			for (int i = 0; i < size - 4; i++) {
+				for (int j = 0; j < size - 4; j++) {
+					if (mono[i][j] == 1 && mono[i+1][j+1]==1 && mono[i+2][j+2]==1 &&mono[i+3][j+3]==1 && mono[i+4][j+4]==1 ) win = 1;
+					if (mono[i][j] == 2 && mono[i+1][j+1]==2 && mono[i+2][j+2]==2 &&mono[i+3][j+3]==2 && mono[i+4][j+4]==2 ) win = 2;	
+				}
 			}
-		}		
+			for (int i = 9; i < size - 7; i--) {
+				for (int j = 0; j < size - 4; j++) {
+					if (mono[i][j] == 1 && mono[i-1][j+1]==1 && mono[i-2][j+2]==1 &&mono[i-3][j+3]==1 && mono[i-4][j+4]==1 ) win = 1;
+					if (mono[i][j] == 2 && mono[i-1][j+1]==2 && mono[i-2][j+2]==2 &&mono[i-3][j+3]==2 && mono[i-4][j+4]==2 ) win = 2;
+				}
+			}
+		}
+		scan.close();
 	}	
 }

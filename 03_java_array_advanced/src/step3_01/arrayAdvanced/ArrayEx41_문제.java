@@ -41,7 +41,7 @@ public class ArrayEx41_문제 {
 					System.out.print(" │ ");
 				}
 				else if (ladder[i][j] == 1) {
-					if (j != 0 && ladder[i][j-1] == 1) {
+					if (j != 0 && ladder[i][j-1] == 1) { 
 						System.out.print("─┤ ");
 					}
 					else if (j != ladder[i].length - 1 && ladder[i][j+1] == 1){
