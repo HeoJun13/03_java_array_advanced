@@ -25,7 +25,7 @@ public class ArrayEx43_문제 {
 		
 		int size = 5;
 		int[][] map = new int[5][5];
-		boolean[][] check = new boolean[5][5];
+		boolean[][] check = new boolean[5][5]; 
 		
 		int x = 0;
 		int y = 0;

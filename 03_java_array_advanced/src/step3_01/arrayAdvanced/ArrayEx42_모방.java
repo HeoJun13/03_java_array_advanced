@@ -2,6 +2,8 @@ package step3_01.arrayAdvanced;
 
 import java.util.Scanner;
 
+import javax.swing.plaf.metal.MetalBorders.PaletteBorder;
+
 /*
  * 
  * # 나만의 마블
@@ -37,20 +39,23 @@ public class ArrayEx42_모방 {
 		
 		while (true) {
 			for (int i = 0; i < map.length; i++) {
-				for (int j = 0; j < map.length; j++) {
-					if (map[i][j] == Lode) {
-						System.out.print(" ■ ");
-					}
-					else if (map[i][j] == player) {
-						System.out.print(" P ");
-					}
-					else {
-						System.out.print(" □ ");
-					}
-					System.out.println();
-					}
+				for (int j = 0; j < map[i].length; j++) {
+					if (map[i][j] == Lode) System.out.print(" ■ ");
+					
+					else if (map[i][j] == player) System.out.print(" P ");
+					
+					else System.out.print(" □ ");
+				 }
+			     System.out.println();
+			    }
 				System.out.println();
+				
+				System.out.print("1~3을 입력하세요 : ");
+				int move = scan.nextInt();
+				
+				player += move;
+				
+				player %= 16;
 				}
 			}
 		}
-	}
